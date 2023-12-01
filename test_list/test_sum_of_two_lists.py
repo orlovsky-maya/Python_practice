@@ -4,6 +4,7 @@
 соответствующих элементов списков L и M.
 Далее программа должна вывести каждый элемент полученного списка на одной строке
 через 1 пробел."""
+import pytest
 
 """Примечание. Количество чисел в обеих строках одинаковое."""
 
@@ -17,24 +18,28 @@ def sum_of_two_list(list1, list2):
     return ' '.join(result)
 
 
+@pytest.mark.smoke
 def test_positive_num():
     l = '3 1 4'
     m = '1 5 9'
     assert sum_of_two_list(l, m) == '4 6 13'
 
 
+@pytest.mark.smoke
 def test_identical_num_in_list():
     l = '1 1 1 1 1 1'
     m = '9 9 9 9 9 9'
     assert sum_of_two_list(l, m) == '10 10 10 10 10 10'
 
 
+@pytest.mark.smoke
 def test_negative_num():
     l = '-1 5 -9 4'
     m = '1 -5 9 -4'
     assert sum_of_two_list(l, m) == '0 0 0 0'
 
 
+@pytest.mark.smoke
 def test_large_num():
     l = ('563847 735634 -873453 83475348 23473249 23473 '
          '37432 7474 56656565 -78787878')
@@ -44,6 +49,7 @@ def test_large_num():
                                      '2771666 81708 56704039 -78313130')
 
 
+@pytest.mark.regression
 def test_empty_lists():
     l = ''
     m = ''
