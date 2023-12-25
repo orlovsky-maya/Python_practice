@@ -30,9 +30,6 @@ def secret_word(encr_word, letters):
         letter = cnt_to_letter.get(cnt, symbol)
         decr_word += letter
 
-    print(cnt_to_letter)
-    print(symbol_to_cnt)
-    print(decr_word)
     return decr_word
 
 
