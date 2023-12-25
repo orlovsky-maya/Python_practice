@@ -11,20 +11,6 @@ n – количество букв в словаре. В следующих n �
 Примечание. Гарантируется, что частоты букв не повторяются."""
 
 
-# def secret_word(word, letters):
-#     dic = {}
-#     for s in letters:
-#         a = s.split(':')
-#         c = a[0]
-#         n = int(a[1])
-#         dic[n] = c
-#
-#     for l in set(word):
-#         c = word.count(l)
-#         word = word.replace(l, dic.get(c, l))
-#     print(word)
-#     return word
-
 def secret_word(encr_word, letters):
     cnt_to_letter = {}
     for s in letters:
