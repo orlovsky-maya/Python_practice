@@ -85,6 +85,3 @@ def test_positive_negative_num():
     numbers = '2'
     answer = '-2'
     assert memory_testing(numbers, answer) == 'NO'
-
-
-
